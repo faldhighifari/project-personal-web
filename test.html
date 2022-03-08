@@ -1,0 +1,146 @@
+<html>
+<head>
+    <title>Personal Web</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <script src="index.js"></script> -->
+</head>
+<body>
+
+    <nav>
+        <!-- Left -->
+        <div class="left-side">
+            <img src="assets/logo.png">
+
+            <ul>
+                <li><a href="index.html" style="font-weight: 900">Home</a></li>
+                <li><a href="project.html">My Project</a></li>
+            </ul>
+        </div>
+
+        <!-- Right -->
+        <div class="right-side">
+            <a href="contact-me.html">Contact Me</a>
+        </div>
+    </nav>
+
+    <div class="container-main">
+
+        <div>
+        <form style="width: 400px;" onsubmit="addProject(event)">
+
+            <div style="margin-bottom: 50px;">
+                <h2 style="text-align: center; font-family: 'Segoe UI';">ADD MY PROJECT</h2>
+            </div>
+        
+
+            <div style="margin-bottom: 25px;">
+                <label for="input-name" style="font-size: 20px; font-weight: 800;">Project Name</label>
+                <input 
+                    type="text" 
+                    id="input-name" 
+                    style="
+                        width: 100%; 
+                        background-color: white; 
+                        border: 1px solid rgb(199, 199, 199);
+                        border-radius: 5px;
+                        padding: 8px;
+                        margin-top: 10px;
+                        box-shadow: 2px 3px 5px #888888
+                    ">
+            </div>
+
+            <!-- <div style="margin-bottom: 25px;">
+                <label for="input-start" style="font-size: 20px; font-weight: 800;">Start Date</label>
+                <input type="date" id="input-start" style="
+                width: 100%; 
+                background-color: white; 
+                border: 1px solid rgb(199, 199, 199);
+                border-radius: 5px;
+                padding: 8px;
+                margin-top: 10px;
+                box-shadow: 2px 3px 5px #888888
+            ">
+            </div> -->
+
+            <!-- <div style="margin-bottom: 25px;">
+                <label for="input-end" style="font-size: 20px; font-weight: 800;">End Date</label>
+                <input type="date" id="input-end" style="
+                width: 100%; 
+                background-color: white; 
+                border: 1px solid rgb(199, 199, 199);
+                border-radius: 5px;
+                padding: 8px;
+                margin-top: 10px;
+                box-shadow: 2px 3px 5px #888888
+            ">
+            </div> -->
+
+            <!-- <div style="margin-bottom: 25px;">
+                <label for="input-tech" style="font-size: 20px; font-weight: 800;">Technologies</label>
+                <div>
+                    <input type="checkbox" name="tech1" value="nodejs">
+                    <label for="tech1"> Node js</label>
+                    <input type="checkbox" name="tech2" value="reactjs">
+                    <label for="tech2"> React Js</label>
+                </div>
+                    
+                    <input type="checkbox" name="tech3" value="nextjs">
+                    <label for="tech3"> Next Js</label>
+                    <input type="checkbox" name="tech4" value="typescript">
+                    <label for="tech4"> Typescript</label>
+            </div> -->
+
+            <div style="margin-bottom: 25px;" >
+                <label for="input-description" style="font-size: 20px; font-weight: 800;">Description</label>
+                <textarea 
+                    id="input-description" 
+                    style="
+                        width: 100%; 
+                        background-color: white; 
+                        border: 1px solid rgb(199, 199, 199);
+                        border-radius: 5px;
+                        padding: 8px;
+                        margin-top: 10px;
+                        height: 100px;
+                        resize: none;
+                        box-shadow: 2px 3px 5px #888888
+                    "></textarea>
+            </div>
+
+            <div>
+                <label>Upload Image</label>
+                <div class="input-blog-image-group">
+                  <label for="input-project-image">
+                    <p>choose</p>
+                    <img src="assets/file.png" alt="file" />
+                  </label>
+                  <input type="file" id="input-project-image" hidden />
+                </div>
+              </div>
+
+            <div style="text-align: right;">
+            <button style="
+                padding: 5px 25px; 
+                background-color: black; 
+                border: none;
+                border-radius: 10px;
+                color: white;
+                font-size: 15;
+                " onclick="addProject()" type="button">Submit</button>
+            </div>
+
+        </form>
+    </div>
+
+        <!-- <hr class="line" /> -->
+
+        <div id="contents" class="project-list">
+
+        </div>
+
+    </div>
+
+    <script src="project.js"></script>
+</body>
+</html>
