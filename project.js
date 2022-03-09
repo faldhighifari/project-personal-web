@@ -89,6 +89,7 @@ function renderBlog() {
 }
 
 function getDistanceTime(timeStart, timeEnd) {
+
   let timeOne =  new Date(timeStart)
   let timeTwo = new Date(timeEnd)
 
@@ -97,9 +98,9 @@ function getDistanceTime(timeStart, timeEnd) {
   // console.log('Now: ', timeNow)
   // console.log('Blog: ', timeBlog)
   
-  let distance = timeTwo - timeOne // miliseconds
+    let distance = timeTwo - timeOne // miliseconds
   
-  console.log('distance: ', distance)
+    console.log('distance: ', distance)
 
     let years = timeTwo.getFullYear() - timeOne.getFullYear();  //tahun
 
