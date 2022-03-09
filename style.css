@@ -99,7 +99,8 @@ nav .right-side a {
     margin-right: 60px; */
 }
 
-                                               /* LEFT SIDE */
+/* ============================================================================== */
+/* LEFT SIDE */
 
 .container-content .left-side {
     flex: 60%;
@@ -148,7 +149,8 @@ nav .right-side a {
     padding: 5px;
     border-radius: 50%;
 }
-                                                /* RIGHT SIDE */
+/* ============================================================================== */
+/* RIGHT SIDE */
 
                                                 
 .container-content .right-side {
@@ -179,9 +181,9 @@ text-align: center;
 
 }
 
+/* ============================================================================== */
+/* Project STYLE */
 
-
-/* BLOG STYLE */
 .blog-form {
     padding: 50px 0;
     display: flex;
@@ -224,7 +226,7 @@ text-align: center;
     .blog-form form .input-blog-image-group {
     font-size: 20px;
     font-weight: 400;
-    padding: 8px;
+    padding: 5px;
     margin-top: 5px;
     margin-bottom: 20px;
     background: #f4f3f3;
@@ -235,6 +237,9 @@ text-align: center;
     
     .blog-form form .input-blog-image-group label p {
     font-size: 15px;
+    /* background-color: grey;
+    border: 1px solid black;
+    border-radius: 8px; */
     }
     
     .blog-form form .input-blog-image-group label {
@@ -250,17 +255,17 @@ text-align: center;
     
     .blog-form form button {
     margin-top: 50px;
-    padding: 8px 20px;
+    padding: 5px 35px;
     font-size: 17px;
     background: black;
-    border-radius: 8px;
+    border-radius: 50px;
     border: none;
     color: #fff;
     cursor: pointer;
     }
     
     .blog hr {
-    border: 1px solid #dbdbdb;
+    border: 1px solid #bebdbd;
     width: 80%;
     margin-right: auto;
     margin-left: auto;
@@ -269,63 +274,72 @@ text-align: center;
     /* Blog list */
     .blog .blog-list {
     margin-top: 80px;
+    margin-left: 80px;
+    margin-right: 80px;
     margin-bottom: 80px;
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    align-items: left;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
     }
     
     .blog .blog-list .blog-list-item {
-    width: 80%;
+    width: 30%;
     padding: 15px;
     margin-bottom: 20px;
-    border: 2px solid #dbdbdb;
+    margin-left: 10px;
+    /* border: 2px solid #dbdbdb; */
+    border: 1px solid black;
     border-radius: 8px;
-    display: flex;
+    /* display: flex; */
     }
     
     .blog .blog-list .blog-list-item .blog-image {
-    flex: 1;
+    /* flex: 1; */
     }
     
     .blog .blog-list .blog-list-item .blog-image img {
     width: 100%;
     height: 300px;
+    border-radius: 5px;
     object-fit: cover;
     }
     
     .blog .blog-list .blog-list-item .blog-content {
     padding-left: 20px;
-    flex: 2;
+    padding-right: 20px;
+    /* flex: 1; */
     }
     
     .blog .blog-list .btn-group {
-    text-align: right;
+    text-align: center;
     margin-bottom: 20px;
     }
     
     .blog .blog-list .btn-group .btn-edit {
-    padding: 5px 10px;
+    padding: 5px 70px;
     border: 0;
     border-radius: 4px;
     background: black;
     text-decoration: none;
     color: white;
-    align-items: left;
-    justify-content: left;
+    /* text-align: left; */
+    /* align-items: left;
+    justify-content: left;  */
     }
     
     .blog .blog-list .btn-group .btn-delete {
-    padding: 5px 10px;
+    padding: 5px 70px;
     border: 0;
     border-radius: 4px;
     background: black;
     color: #fff;
     text-decoration: none;
     color: white;
+    /* text-align: right; */
     }
     
-    .blog .blog-list h1 a {
+    .blog .blog-list h2 a {
     text-decoration: none;
     color: #000000;
     }
@@ -344,3 +358,4 @@ text-align: center;
     text-align: justify;
     }
 
+/* ============================================================================== */
