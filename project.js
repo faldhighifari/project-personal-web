@@ -101,34 +101,54 @@ function getDistanceTime(timeStart, timeEnd) {
   
   console.log('distance: ', distance)
 
+    let years = timeTwo.getFullYear() - timeOne.getFullYear();  //tahun
+
     let months;
     months = (timeTwo.getFullYear() - timeOne.getFullYear()) * 12;
-    console.log('selisih bulan', months)
+    // console.log('selisih bulan', months)
 
     months -= timeOne.getMonth();
-    console.log(timeOne.getMonth())
-    console.log(months)
+    months += timeTwo.getMonth(); //Bulan
 
-    months += timeTwo.getMonth();
-    console.log(timeTwo.getMonth())
-    console.log(months)
+    // months -= timeOne.getMonth();
+    // console.log(timeOne.getMonth())
+    // console.log(months)
+
+    // months += timeTwo.getMonth();
+    // console.log(timeTwo.getMonth())
+    // console.log(months)
     // return months <= 0 ? 0 : months;
 
+    
 
-  let dayDistance = Math.floor(distance / (24 * 60 * 60 * 1000 )) // convert to day
+    let dayDistance = Math.floor(distance / (24 * 60 * 60 * 1000 )) // convert to day
 
-  console.log('dayDistance: ', dayDistance)
+    console.log('dayDistance: ', Math.abs(dayDistance))
+    console.log('selisih bulan: ', Math.abs(months))
+    console.log('selisih tahun: ', Math.abs(years))
   
 //   return Math.abs(dayDistance)
 
-  if(dayDistance <= 30) {
-    return dayDistance + ' days ago'
+  if(Math.abs(dayDistance) <= 30) {
+    return Math.abs(dayDistance) + ' days ago'
   }else {
-      if(dayDistance > 30){
-        return months <= 0 ? '0 months ago' : months + ' months ago';
+      if(Math.abs(dayDistance) > 30 && Math.abs(dayDistance) <=365){
+        return months <= 0 ? '0 months ago' : Math.abs(months) + ' months ago';
+      } else{
+          if(Math.abs(dayDistance) > 366){
+              return Math.abs(years) + ' years ago'
+          }
       }
     }
 }
+
+
+
+
+
+
+
+
 
 //     let hourDistance = Math.floor(distance / ( 60 * 60 * 1000 ))
 //     if(hourDistance != 0) {
