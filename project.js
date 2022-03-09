@@ -112,18 +112,24 @@ function getDistanceTime(timeStart, timeEnd) {
     months += timeTwo.getMonth();
     console.log(timeTwo.getMonth())
     console.log(months)
-    return months <= 0 ? 0 : months;
+    // return months <= 0 ? 0 : months;
 
 
   let dayDistance = Math.floor(distance / (24 * 60 * 60 * 1000 )) // convert to day
 
   console.log('dayDistance: ', dayDistance)
   
-//   return dayDistance
+//   return Math.abs(dayDistance)
 
-//   if(dayDistance != 0) {
-//     return dayDistance + ' day ago'
-//   }else {
+  if(dayDistance <= 30) {
+    return dayDistance + ' days ago'
+  }else {
+      if(dayDistance > 30){
+        return months <= 0 ? '0 months ago' : months + ' months ago';
+      }
+    }
+}
+
 //     let hourDistance = Math.floor(distance / ( 60 * 60 * 1000 ))
 //     if(hourDistance != 0) {
 //       return hourDistance + ' hours ago'
@@ -137,4 +143,4 @@ function getDistanceTime(timeStart, timeEnd) {
 //       }
 //     }
 //   }
-}
+// }
